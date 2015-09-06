@@ -760,3 +760,7 @@
 		{
 			color: #777;
 		}
+
+.g-recaptcha {
+	margin-left: 300px; padding: 20px;
+}

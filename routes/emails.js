@@ -4,6 +4,7 @@ var config = require('../config/config');
 var mandrill = require("node-mandrill")(config.mandrill.key);
 var logger = require('../logger/general-logger');
 var errorLogger = require('../logger/error-logger');
+var request = require('request');
 
 router.put('/', function (req, res, next) {
     req.checkBody('name', 'Invalid name').notEmpty();
@@ -11,6 +12,7 @@ router.put('/', function (req, res, next) {
     req.checkBody('email', 'Invalid email supplied').isEmail();
     req.checkBody('subject', 'Invalid subject').notEmpty();
     req.checkBody('message', 'Invalid messsage').notEmpty();
+    req.checkBody('captcha', 'Invalid captcha').notEmpty();
 
     // Validate input
     var errors = req.validationErrors();
@@ -20,6 +22,13 @@ router.put('/', function (req, res, next) {
         errorLogger.error("Contact form validation error: ", errors);
         res.send({status: 'error', data: errors, code: 401, message: 'Invalid parameters'});
     } else {
+        // Validate ReCaptcha
+        //request.post({
+        //    url: 'https://www.google.com/recaptcha/api/siteverify',
+        //    form: {secret: '6LdPbAwTAAAAAKJiADr4sJnOyDuSsZSfyTSyLHxJ', response: captcha}
+        //}, function (err, httpResponse, body) {
+        //    console.log(err, httpResponse, body);
+        //});
 
         var name = req.body.name;
         var email = req.body.email;
@@ -41,7 +50,7 @@ router.put('/', function (req, res, next) {
                 errorLogger.error(error);
 
                 res.status(500);
-                res.json({status: 'error', message : 'Unable to send email'});
+                res.json({status: 'error', message: 'Unable to send email'});
             } else {
                 // Log Response
                 logger.info("Mandrill Success>>");

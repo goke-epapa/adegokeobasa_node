@@ -28,24 +28,29 @@
                 return;
             }
 
-            _this.attr("disabled", true);
-            title.html("<i class='fa fa-spin fa-spinner fa-4x'></i>");
-            $.ajax({
-                method : "PUT",
-                data : data,
-                url : "/emails",
-                dataType : "json",
-                error : function () {
-                    changeTemporarily(title, "Wanna Hire Me?", "I'm afraid");
-                },
-                success : function () {
-                    changeTemporarily(title, "Wanna Hire Me?", "Thanks for reaching out to me, I will get back to you soonest. :)");
-                    $("#resetBtn").click();
-                },
-                complete : function () {
-                    _this.attr('disabled', false);
-                }
-            });
+            // Recaptcha
+            data.captcha = grecaptcha.getResponse();
+
+            if(data.captcha) {
+                _this.attr("disabled", true);
+                title.html("<i class='fa fa-spin fa-spinner fa-4x'></i>");
+                $.ajax({
+                    method: "PUT",
+                    data: data,
+                    url: "/emails",
+                    dataType: "json",
+                    error: function () {
+                        changeTemporarily(title, "Wanna Hire Me?", "I'm afraid");
+                    },
+                    success: function () {
+                        changeTemporarily(title, "Wanna Hire Me?", "Thanks for reaching out to me, I will get back to you soonest. :)");
+                        $("#resetBtn").click();
+                    },
+                    complete: function () {
+                        _this.attr('disabled', false);
+                    }
+                });
+            }
         });
     });
 })($);
