@@ -1,4 +1,4 @@
-My Personal Website
+Node.js version of my personal website
 =====================
 
 Technologies used.
