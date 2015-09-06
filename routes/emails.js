@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var config = require('../config/config');
 var mandrill = require("node-mandrill")(config.mandrill.key);
+var logger = require('../logger/general-logger');
+var errorLogger = require('../logger/error-logger');
 
 router.put('/', function (req, res, next) {
     req.checkBody('name', 'Invalid name').notEmpty();
@@ -12,8 +14,10 @@ router.put('/', function (req, res, next) {
 
     // Validate input
     var errors = req.validationErrors();
+    res.set('Content-Type', 'application/json');
+
     if (errors) {
-        console.log("Contact form validation error: ", errors);
+        errorLogger.error("Contact form validation error: ", errors);
         res.send({status: 'error', data: errors, code: 401, message: 'Invalid parameters'});
     } else {
 
@@ -32,15 +36,20 @@ router.put('/', function (req, res, next) {
             }
         }, function (error, response) {
             if (error) {
-                console.log("Mandrill Error>>", JSON.stringify(error));
                 // Log Error
+                errorLogger.error("Mandrill Error>>");
+                errorLogger.error(error);
+
+                res.status(500);
+                res.json({status: 'error', message : 'Unable to send email'});
             } else {
-                // Log Response to File
-                console.log("Mandrill Success>>", response);
+                // Log Response
+                logger.info("Mandrill Success>>");
+                logger.info(response);
+
+                res.json({status: 'success', data: {}});
             }
         });
-
-        res.send({status: 'success', data: {}});
     }
 });
 

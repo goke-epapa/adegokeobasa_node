@@ -644,7 +644,7 @@
 			.wrapper.style4 form textarea
 			{
 				border: none;
-				background: #282828;
+				/*background: #282828;*/
 			}
 
 			.wrapper.style4 form input[type=text]:focus,
@@ -652,7 +652,8 @@
 			.wrapper.style4 form select:focus,
 			.wrapper.style4 form textarea:focus
 			{
-				background: #252525;
+				background: #eeeeee;
+				color: #000000;
 			}
 		
 /*********************************************************************************/
