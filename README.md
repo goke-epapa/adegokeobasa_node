@@ -6,4 +6,3 @@ Technologies used.
 - CSS3
 - Javascript
 - Node.js
-- Mandrill

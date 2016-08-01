@@ -1,15 +1,16 @@
 <!DOCTYPE HTML>
 <!--
-	Miniport by HTML5 UP
-	html5up.net | @n33co
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="en">
+<html>
 <head>
     <title>{{title}}</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Personal Website of Adegoke Obasa"/>
-    <meta name="keywords" content="adegoke,obasa,personal,website"/>
+    <meta name="keywords" content="adegoke,obasa,personal,website,software,engineer"/>
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
@@ -24,144 +25,98 @@
     <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
     <link rel="manifest" href="favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
     <!--[if lte IE 8]>
-    <script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/site.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="css/skel.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-desktop.css"/>
-    </noscript>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
     <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="css/ie/v9.css"/><![endif]-->
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
 </head>
-<body>
+<body id="top">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQQGG5"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQQGG5');</script>
+<!-- End Google Tag Manager -->
+<!-- Header -->
+<header id="header">
+    <h1><strong>Adegoke Obasa</strong><br/></h1>
+    <h1>Software and DevOps Engineer</h1>
+</header>
 
-<!-- Nav -->
-<nav id="nav">
-    <ul class="container">
-        <li><a href="#top">Top</a></li>
-        <!--<li><a href="#work">Work</a></li>-->
-        <!--<li><a href="#portfolio">Portfolio</a></li>-->
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- Home -->
-<div class="wrapper style1 first">
-    <article class="container" id="top">
+<!-- Main -->
+<div id="main">
+    <!-- Two -->
+    <section id="two">
+        <h2>Articles and Presentations</h2>
         <div class="row">
-            <div class="4u">
-                <span class="image fit"><img src="images/epapa.jpg" alt=""/></span>
-            </div>
-            <div class="8u">
-                <header>
-                    <h1>Hi. I'm <strong>Adegoke Obasa</strong>.</h1>
-                </header>
-                <p>Software Engineer | Founder <a target="_blank" href="http://9janimations.com">9janimations.com</a></p>
-                <!--<a href="#work" class="button big scrolly">Learn about what I do</a>-->
-                <a href="#contact" class="button big scrolly">Get in touch with me</a>
+            {{#articles}}
+            <article class="6u 12u$(xsmall) work-item">
+                <a href="{{url}}">{{name}}</a>
+                <h3><a href="event.url">{{event.name}}</a>, {{date}}</h3>
+                <p><a href="{{venue.url}}">{{venue.name}}</a>, {{venue.location}}</p>
+            </article>
+            {{/articles}}
+        </div>
+        <ul class="actions">
+            <li><a href="http://ng.linkedin.com/in/adegokeobasa" class="button">Full Portfolio</a></li>
+        </ul>
+    </section>
+
+    <!-- Three -->
+    <section id="three">
+        <h2 id="titleHolder">Get In Touch</h2>
+        <p>Feel free to email me for business related issues, consultation, or to just say hello!</p>
+        <div class="row">
+            <div class="12u$ 12u$(small)">
+                <ul class="labeled-icons">
+                    <li>
+                        <h3 class="icon fa-home"><span class="label">Address</span></h3>
+                        127.0.0.1
+                    </li>
+                    <li>
+                        <h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+                        +2348079228385
+                    </li>
+                    <li>
+                        <h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+                        <a href="#">adegokeobasa[at]gmail.com</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </article>
+    </section>
 </div>
 
-<!-- Contact -->
-<div class="wrapper style4">
-    <article id="contact" class="container small">
-        <header>
-            <h2 id="titleHolder">Wanna Hire me?</h2>
+<!-- Footer -->
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="http://twitter.com/goke_epapa" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="http://facebook.com/goke.epapa" class="icon fa-facebook"><span class="label">Facebook</span></a>
+        </li>
+        <li><a href="http://www.slideshare.net/gokeepapa" class="icon fa-slideshare"><span
+                class="label">Slideshare</span></a></li>
+        <li><a href="http://ng.linkedin.com/in/adegokeobasa" class="icon fa-linkedin"><span
+                class="label">LinkedIn</span></a></li>
+        <li><a href="http://github.com/goke-epapa" class="icon fa-github"><span class="label">Github</span></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; 2016 - Adegoke Obasa</li>
+        <li>Proudly hosted with <a href="https://m.do.co/c/c37a0dd9b85b">DigitalOcean</a>.</li>
+    </ul>
+</footer>
 
-            <p>Drop me a private message and I'll get back to you. :)</p>
-        </header>
-        <div>
-            <div class="row">
-                <div class="12u">
-                    <form method="post" action="/emails">
-                        <div>
-                            <div class="row">
-                                <div class="6u">
-                                    <input type="text" required name="name" id="name" placeholder="Name"/>
-                                </div>
-                                <div class="6u">
-                                    <input type="email" required name="email" id="email" placeholder="Email"/>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="12u">
-                                    <input type="text" required name="subject" id="subject" placeholder="Subject"/>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="12u">
-                                    <textarea name="message" required id="message" placeholder="Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="g-recaptcha" data-sitekey="6LdPbAwTAAAAAC9CJRT5ec0qavCzIdywa13Wgz4d"></div>
-                            <div class="row double">
-                                <div class="12u">
-                                    <ul class="actions">
-                                        <li><input id="submitBtn" type="button" value="Send Message"/></li>
-                                        <li><input id="resetBtn" type="reset" value="Clear Form" class="alt"/></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.poptrox.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
 
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="12u">
-                    <hr/>
-                    <h3>Find me on ...</h3>
-                    <ul class="social">
-                        <li><a href="http://twitter.com/goke_epapa" class="icon fa-twitter"><span
-                                class="label">Twitter</span></a></li>
-                        <li><a href="http://facebook.com/goke.epapa" class="icon fa-facebook"><span class="label">Facebook</span></a>
-                        </li>
-                        <!--<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>-->
-                        <li><a href="http://ng.linkedin.com/in/adegokeobasa" class="icon fa-linkedin"><span
-                                class="label">LinkedIn</span></a></li>
-                        <!--<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>-->
-                        <li><a href="https://plus.google.com/+AdegokeObasa" class="icon fa-google-plus"><span
-                                class="label">Google+</span></a></li>
-                        <li><a href="http://github.com/goke-epapa" class="icon fa-github"><span
-                                class="label">Github</span></a></li>
-                        <!--
-                        <li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-                        <li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
-                        <li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
-                        <li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
-                        <li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
-                        <li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
-                        <li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
-                        <li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
-                        <li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-                        -->
-                    </ul>
-                    <hr/>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <ul id="copyright">
-                <li>&copy; Adegoke Obasa. All rights reserved.</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
-        </footer>
-    </article>
-</div>
 </body>
-<script src='https://www.google.com/recaptcha/api.js'></script>
 </html>

@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Clean Code",
+        "url": "http://www.slideshare.net/gokeepapa/clean-code-37134605",
+        "event": {
+            "name": "Tech Talks",
+            "url": "#"
+        },
+        "date": "July 2014",
+        "venue": {
+            "name": "Konga",
+            "url": "http://konga.com",
+            "location": "Lagos"
+        }
+    },
+    {
+        "name": "Code Documentation",
+        "url": "http://www.slideshare.net/gokeepapa/code-documentation-37134603",
+        "event": {
+            "name": "Tech Talks",
+            "url": "#"
+        },
+        "date": "July 2014",
+        "venue": {
+            "name": "Konga",
+            "url": "http://konga.com",
+            "location": "Lagos"
+        }
+    },
+    {
+        "name": "Horizontal Scaling of PHP Applications",
+        "url": "https://speakerdeck.com/adegoke/horizontal-scaling-of-php-applications",
+        "event": {
+            "name": "Lagos PHP Meetup",
+            "url": "https://attending.io/events/lagosphpmeetup"
+        },
+        "date": "April 2016",
+        "venue": {
+            "name": "Andela Amity Campus",
+            "url": "http://konga.com",
+            "location": "Lagos"
+        }
+    }
+]

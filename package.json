@@ -1,6 +1,6 @@
 {
   "name": "adegokeobasa",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -15,7 +15,6 @@
     "jade": "~1.11.0",
     "log4js": "^0.6.26",
     "morgan": "~1.6.1",
-    "node-mandrill": "^1.0.1",
     "request": "^2.61.0",
     "serve-favicon": "~2.3.0"
   }
