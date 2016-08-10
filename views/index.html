@@ -56,8 +56,15 @@
             {{#articles}}
             <article class="6u 12u$(xsmall) work-item">
                 <a href="{{url}}">{{name}}</a>
-                <h3><a href="event.url">{{event.name}}</a>, {{date}}</h3>
-                <p><a href="{{venue.url}}">{{venue.name}}</a>, {{venue.location}}</p>
+                {{#event}}
+                    <h3><a href="event.url">{{event.name}}</a>, {{date}}</h3>
+                {{/event}}
+                {{^event}}
+                    <h3>{{date}}</h3>
+                {{/event}}
+                {{#venue}}
+                    <p><a href="{{venue.url}}">{{venue.name}}</a>, {{venue.location}}</p>
+                {{/venue}}
             </article>
             {{/articles}}
         </div>
