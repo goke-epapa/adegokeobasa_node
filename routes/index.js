@@ -6,7 +6,7 @@ var articles = require('../data/articles.json');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     var data = {
-        title: 'Adegoke Obasa - Software Engineer based in Nigeria',
+        title: 'Adégòkè Obasá - Software Engineer based in Nigeria',
         'articles': articles
     };
     res.render('index', data);
