@@ -7,7 +7,7 @@ var articles = require('../data/articles.json');
 router.get('/', function (req, res, next) {
     var data = {
         title: 'Adégòkè Obasá - Software Engineer based in Nigeria',
-        'articles': articles
+        'articles': articles.reverse()
     };
     res.render('index', data);
 });
