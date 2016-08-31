@@ -50,7 +50,7 @@
 <!-- Main -->
 <div id="main">
     <!-- Two -->
-    <section id="two">
+    <section id="one">
         <h2>Articles and Presentations</h2>
         <div class="row">
             {{#articles}}
@@ -67,6 +67,18 @@
                 {{/venue}}
             </article>
             {{/articles}}
+        </div>
+    </section>
+
+    <section id="two">
+        <h2>Publications</h2>
+        <div class="row">
+            {{#publications}}
+            <article class="12u 12u$(xsmall) work-item">
+                <a href="{{url}}">{{name}}</a>
+                <h3>{{date}}</h3>
+            </article>
+            {{/publications}}
         </div>
         <ul class="actions">
             <li><a href="http://ng.linkedin.com/in/adegokeobasa" class="button">Full Portfolio</a></li>
