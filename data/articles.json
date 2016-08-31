@@ -54,6 +54,15 @@
   {
     "name": "IndexedDB and Push Notifications in Progressive Web Apps",
     "url": "http://www.slideshare.net/gokeepapa/indexeddb-and-push-notifications-in-progressive-web-apps",
-    "date": "August 2016"
+    "event": {
+      "name": "PWA Codelab #2",
+      "url": "http://attending.io/events/buildpwa-v2"
+    },
+    "date": "August 2016",
+    "venue": {
+      "name": "Wennovation Hub",
+      "url": "http://wennovationhub.com/",
+      "location": "Ibadan"
+    }
   }
 ]
